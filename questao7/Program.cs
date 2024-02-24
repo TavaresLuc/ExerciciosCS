@@ -5,8 +5,6 @@ B) Implemente uma função de sacar, a qual deve subtraia o valor do saldo;
 C) Implemente uma função comprar que deve adicionar o valor da compra na array compras
 do respectivo correntista.
 */
-using System.Runtime.CompilerServices;
-
 public class Program
 {
     static Correntista correntista = new Correntista("Dimitri", 6998, 1500.90m);
@@ -33,12 +31,12 @@ public class Program
                     {
                         case 1:
                             Console.WriteLine("\nVocê escolheu a opção DEPÓSITO, digite o valor:");
-                            opcaoDepositar();
+                            OperacoesBancarias.opcaoDepositar(correntista);
                         break;
 
                         case 2:
                             Console.WriteLine("\nVocê escolheu a opção SACAR, digite o valor:");
-                            opcaoSacar();
+                            OperacoesBancarias.opcaoSacar(correntista);
                         break;
 
                         case 3:
@@ -54,65 +52,16 @@ public class Program
                 {
                     Console.WriteLine("Entrada inválida. Por favor, digite um número entre 1 e 3.");
                 }
-            } while (opcao != 1 && opcao != 2 && opcao != 3 );
+            } while (opcao != 1 && opcao != 2 && opcao != 3);
         }
     }
 
-    public static void ExibirSaldo(Correntista correntista)
-        {
-            Console.WriteLine($"Nome: {correntista.Nome}, Número da Conta: {correntista.NumeroConta}, Saldo: {correntista.Saldo:C}");
-        }
-
-    public static void Restart()
+     public static void Restart()
     {
         Console.WriteLine("Digite qualquer tecla para continuar!");
         Console.ReadLine();
         Console.Clear();
         Main();
-    }
-
-    public static void opcaoDepositar() 
-        {
-            do {
-
-                decimal depositoAceito;
-                string deposito = Console.ReadLine() ?? string.Empty;
-
-                if (decimal.TryParse(deposito, out depositoAceito))
-                {
-                    Console.WriteLine($"\nSeu depósito foi de: {depositoAceito} ");
-                    Operacoes.Depositar(correntista, depositoAceito);
-                    Restart();
-                    break;
-                }
-                else              
-                Console.WriteLine("Valor Inválido, digite novamente.");
-            } while(true);
-        }
-
-    public static void opcaoSacar()
-    {
-        do {
-            decimal saqueAceito;
-            string saque = Console.ReadLine() ?? string.Empty;
-
-            if (decimal.TryParse(saque, out saqueAceito))
-            {
-                Console.WriteLine($"\nSeu saque foi de: {saqueAceito} ");
-
-                if (saqueAceito > correntista.Saldo)
-                {
-                    Console.WriteLine("Saque não realizado, valor maior do que o saldo.");
-                    break;
-                }
-
-                Operacoes.Sacar(correntista, saqueAceito);
-                Restart();
-                break;
-            }
-            else              
-            Console.WriteLine("Valor inválido, digite novamente.");
-        } while(true);
-    }
+    }   
 }
 
