@@ -1,4 +1,5 @@
-﻿/*Questão 7: Considere objeto de correntistas
+﻿/*Questão 7: 
+Considere objeto de correntistas
 A) Implemente uma função de depositar, a qual deve incrementar o valor do saldo;
 B) Implemente uma função de sacar, a qual deve subtraia o valor do saldo;
 C) Implemente uma função comprar que deve adicionar o valor da compra na array compras
@@ -119,29 +120,3 @@ public class Program
 
 }
 
-public class Correntista 
-{
-    
-    public string Nome { get; set;}
-    public int NumeroConta { get; set;}
-    public decimal Saldo { get; set;}
-    
-    public Correntista(string nome, int numeroConta, decimal saldo)
-    {
-        Nome = nome;
-        NumeroConta = numeroConta;
-        Saldo = saldo;
-        
-    }
-
-    // Depositar
-    public void Depositar(decimal valor)
-    {
-        Saldo += valor;
-    }
-    
-    public void Sacar(decimal valor)
-    {
-        Saldo -= valor;
-    }
-}
