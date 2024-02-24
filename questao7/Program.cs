@@ -18,10 +18,12 @@ public class Program
             do
             {           
                 Console.WriteLine("\nOlá, bem vindo ao Sistema Bancário do Tavares!");
-                Console.WriteLine("Escolha as opções abaixo:");
-                Console.WriteLine("1 - Para depositar, aperte a tecla 1;");
-                Console.WriteLine("2 - Para Sacar, aperte a tecla 2.");
-
+                Console.WriteLine("-- Escolha uma das opções abaixo:\n");
+                Console.WriteLine("---- 1 - Para depositar, aperte a tecla 1;");
+                Console.WriteLine("---- 2 - Para Sacar, aperte a tecla 2;");
+                Console.WriteLine("---- 3 - Para realizar uma compra, aperte a tecla 3;");
+                Console.WriteLine("---- 5 - Para consltar suas compras, aperte a tecla 4;");
+                Console.WriteLine("---- 4 - Para encerrar o programa, aperte a tecla 5.");
                 
                 string resposta = Console.ReadLine() ?? string.Empty;
 
@@ -40,9 +42,19 @@ public class Program
                         break;
 
                         case 3:
-                            Console.WriteLine("Compra realizada com sucesso!");
+                            Console.WriteLine("\nVocê escolheu a opção COMPRAR, digite o valor:");
+                            OperacoesBancarias.opcaoComprar(correntista);
                         break;
 
+                        case 4:
+                            Console.WriteLine("\n Essas são todas as suas compras realizadas:");
+                            OperacoesBancarias.consultarCompras(correntista);
+                        break;
+
+                        case 5:
+                            Environment.Exit(0);
+                        break;
+                            
                         default:
                             Console.WriteLine("Por favor, digite um número entre 1 e 3.");
                         break;
@@ -52,16 +64,8 @@ public class Program
                 {
                     Console.WriteLine("Entrada inválida. Por favor, digite um número entre 1 e 3.");
                 }
-            } while (opcao != 1 && opcao != 2 && opcao != 3);
+            } while (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4);
         }
     }
-
-     public static void Restart()
-    {
-        Console.WriteLine("Digite qualquer tecla para continuar!");
-        Console.ReadLine();
-        Console.Clear();
-        Main();
-    }   
 }
 

@@ -11,7 +11,7 @@ public class OperacoesBancarias
             {
                 Console.WriteLine($"\nSeu depósito foi de: {depositoAceito} ");
                 Operacoes.Depositar(correntista, depositoAceito);
-                Program.Restart();
+                Operacoes.Restart();
                 break;
             }
             else
@@ -36,11 +36,39 @@ public class OperacoesBancarias
                 }
 
                 Operacoes.Sacar(correntista, saqueAceito);
-                Program.Restart();
+                Operacoes.Restart();
                 break;
             }
             else              
             Console.WriteLine("Valor inválido, digite novamente.");
         } while(true);
+    }
+
+    public static void opcaoComprar(Correntista correntista)
+    {
+        do {
+            decimal compraAceita;
+            string compra = Console.ReadLine() ?? string.Empty;
+
+            if (decimal.TryParse(compra, out compraAceita))
+            {
+                if (compraAceita > correntista.Saldo) 
+                {
+                    Console.WriteLine("\n Compra recusada, SALDO INSUFICIENTE!");
+                    break;
+                    } else {
+                        Console.WriteLine("\n Compra aprovada!");
+                        Operacoes.Comprar(correntista, compraAceita);
+                        Operacoes.Restart();
+                        break;
+                        
+                    } 
+            }
+        }while(true);
+    }
+
+    public static void consultarCompras(Correntista correntista)
+    {
+        Console.WriteLine($"Suas compras realizadas: \n {correntista.Compras}");
     }
 }
