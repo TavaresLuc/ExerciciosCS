@@ -69,6 +69,14 @@ public class OperacoesBancarias
 
     public static void consultarCompras(Correntista correntista)
     {
-        Console.WriteLine($"Suas compras realizadas: \n {correntista.Compras}");
+        Console.WriteLine($"Suas compras realizadas: \n");
+
+         
+        foreach (decimal compra in correntista.Compras)
+        {             
+            for (int i = 1; i < correntista.Compras.Count; i++) {   
+                Console.Write($"Compra {i}: {compra:C} ||");
+            }
+        }
     }
 }

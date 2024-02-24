@@ -22,8 +22,8 @@ public class Program
                 Console.WriteLine("---- 1 - Para depositar, aperte a tecla 1;");
                 Console.WriteLine("---- 2 - Para Sacar, aperte a tecla 2;");
                 Console.WriteLine("---- 3 - Para realizar uma compra, aperte a tecla 3;");
-                Console.WriteLine("---- 5 - Para consltar suas compras, aperte a tecla 4;");
-                Console.WriteLine("---- 4 - Para encerrar o programa, aperte a tecla 5.");
+                Console.WriteLine("---- 4 - Para consultar suas compras, aperte a tecla 4;");
+                Console.WriteLine("---- 5 - Para encerrar o programa, aperte a tecla 5.");
                 
                 string resposta = Console.ReadLine() ?? string.Empty;
 

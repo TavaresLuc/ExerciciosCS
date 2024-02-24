@@ -26,7 +26,7 @@ public class Operacoes
     {
         Console.WriteLine("Digite qualquer tecla para continuar!");
         Console.ReadLine();
-        Console.Clear();
+    //    Console.Clear();
         Program.Main();
     }   
 
