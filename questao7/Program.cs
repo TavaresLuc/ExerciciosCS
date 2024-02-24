@@ -54,24 +54,9 @@ public class Program
                 {
                     Console.WriteLine("Entrada inválida. Por favor, digite um número entre 1 e 3.");
                 }
-            } while (opcao != 1 && opcao != 2 && opcao != 3);
+            } while (opcao != 1 && opcao != 2 && opcao != 3 );
         }
     }
-
-    class Operacoes
-    {
-        public static void Depositar(Correntista correntista, decimal valor)
-        {
-            correntista.Depositar(valor);
-            ExibirSaldo(correntista);       
-        }
-
-        public static void Sacar(Correntista correntista, decimal valor)
-        {
-            correntista.Sacar(valor);
-            ExibirSaldo(correntista);
-        }
-    }   
 
     public static void ExibirSaldo(Correntista correntista)
         {
@@ -101,7 +86,7 @@ public class Program
                     break;
                 }
                 else              
-                Console.WriteLine("Depósito Inválido, digite novamente.");
+                Console.WriteLine("Valor Inválido, digite novamente.");
             } while(true);
         }
 
@@ -120,13 +105,13 @@ public class Program
                     Console.WriteLine("Saque não realizado, valor maior do que o saldo.");
                     break;
                 }
-                
+
                 Operacoes.Sacar(correntista, saqueAceito);
                 Restart();
                 break;
             }
             else              
-            Console.WriteLine("Depósito Inválido, digite novamente.");
+            Console.WriteLine("Valor inválido, digite novamente.");
         } while(true);
     }
 }
