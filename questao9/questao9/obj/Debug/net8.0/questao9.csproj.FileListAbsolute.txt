@@ -1,0 +1,15 @@
+C:\ExerciciosCS\questao9\questao9\bin\Debug\net8.0\questao9.exe
+C:\ExerciciosCS\questao9\questao9\bin\Debug\net8.0\questao9.deps.json
+C:\ExerciciosCS\questao9\questao9\bin\Debug\net8.0\questao9.runtimeconfig.json
+C:\ExerciciosCS\questao9\questao9\bin\Debug\net8.0\questao9.dll
+C:\ExerciciosCS\questao9\questao9\bin\Debug\net8.0\questao9.pdb
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\questao9.GeneratedMSBuildEditorConfig.editorconfig
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\questao9.AssemblyInfoInputs.cache
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\questao9.AssemblyInfo.cs
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\questao9.csproj.CoreCompileInputs.cache
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\questao9.sourcelink.json
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\questao9.dll
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\refint\questao9.dll
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\questao9.pdb
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\questao9.genruntimeconfig.cache
+C:\ExerciciosCS\questao9\questao9\obj\Debug\net8.0\ref\questao9.dll
